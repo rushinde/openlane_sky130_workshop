@@ -50,6 +50,13 @@ Check synthesis reports and results
 
 ## Floorplanning and placement
 
+After synthesis, floorplanning is the next step in physical design. The objective of floor planning is to
+1. Define the width and height of die and core
+2. Define locations of pre-placed cells
+3. Surround pre-placed cells with decoupling capacitors
+4. Power planning (Avoiding ground bounce and voltage droops_
+5. Logical cell placement 
+
 Get examples of configuration variables
 
 ![](/images/11.png)
@@ -157,8 +164,13 @@ plot y vs time a
 
 # Day 4
 
+## Timing Analysis + CTS
+
+The objective is to plug the custom inverter cell into the picorv32a design. This is done by creating a LEF file, which contains information about layers, via, DRC etc. The lef file of inverter is added to merged.lef. We then perform Setup Timing Analysis using both OpenSTA and OpenROAD with ideal and real clocks.
 
 # Day 5
+
+Power distribution network and routing
 
 # Acknowledgements
 
